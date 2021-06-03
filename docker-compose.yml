@@ -6,7 +6,7 @@ node:
     - ./ganache_data:/ganache_data
   entrypoint:
     - node
-    - ./build/cli.node.js
+    - /app/ganache-core.docker.cli.js
     - --deterministic
     - --db=/ganache_data
     - --mnemonic
@@ -17,4 +17,5 @@ node:
     - '0.0.0.0'
     - --debug
 # ENTRYPOINT ["node", "./build/cli.node.js"]
+# ENTRYPOINT ["node", "/app/ganache-core.docker.cli.js"]
 
